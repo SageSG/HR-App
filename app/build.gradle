@@ -1,0 +1,149 @@
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+    id 'com.google.gms.google-services'
+    id 'kotlin-kapt'
+}
+
+android {
+    compileSdk 31
+
+    defaultConfig {
+        applicationId "com.example.nodrama"
+        minSdk 28
+        targetSdk 31
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    aaptOptions {
+        noCompress "tflite"
+        // or noCompress "lite"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    buildFeatures {
+        dataBinding true
+        viewBinding true
+        mlModelBinding true
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+}
+
+dependencies {
+    // New Android 12 SplashScreen API stuff
+    implementation 'androidx.core:core-splashscreen:1.0.0-beta01'
+
+    // Architecture components
+    implementation "androidx.activity:activity-ktx:1.4.0"
+    implementation "androidx.work:work-runtime:2.7.1"
+    implementation "androidx.work:work-runtime-ktx:2.7.1"
+    // Kotlin + coroutines
+    implementation("androidx.work:work-runtime-ktx:2.7.1")
+
+    // Room components
+    implementation "androidx.room:room-runtime:2.4.1"
+    implementation "androidx.room:room-ktx:2.4.1"
+    implementation 'org.tensorflow:tensorflow-lite-support:0.1.0'
+    implementation 'org.tensorflow:tensorflow-lite-metadata:0.1.0'
+    implementation 'org.tensorflow:tensorflow-lite-gpu:2.3.0'
+    implementation 'com.google.firebase:firebase-ml-common:22.1.2'
+    implementation 'com.google.mlkit:image-labeling-custom-common:17.0.0'
+    implementation 'com.google.mlkit:linkfirebase:17.0.0'
+    implementation 'com.google.android.gms:play-services-mlkit-image-labeling-custom:16.0.0-beta3'
+
+    kapt "androidx.room:room-compiler:2.4.1"
+
+    implementation "androidx.datastore:datastore-preferences:1.0.0"
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+
+    // Other components
+    implementation 'com.github.dhaval2404:imagepicker:2.1'
+    implementation 'com.google.mlkit:image-labeling:17.0.7'
+
+    // Lifecycle components
+    implementation "androidx.lifecycle:lifecycle-extensions:2.2.0"
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.4.0"
+    kapt "androidx.lifecycle:lifecycle-compiler:2.4.0"
+    implementation "androidx.lifecycle:lifecycle-viewmodel-savedstate:2.4.0"
+    implementation "androidx.lifecycle:lifecycle-reactivestreams-ktx:2.4.0"
+    implementation "androidx.lifecycle:lifecycle-livedata-ktx:2.4.0"
+    implementation "androidx.lifecycle:lifecycle-runtime-ktx:2.4.0"
+    implementation "androidx.lifecycle:lifecycle-common-java8:2.4.0"
+
+    implementation 'androidx.core:core-ktx:1.7.0'
+    implementation 'androidx.appcompat:appcompat:1.4.1'
+    implementation 'com.google.android.material:material:1.5.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.3'
+    implementation 'com.google.firebase:firebase-auth:19.2.0'
+    implementation platform('com.google.firebase:firebase-bom:29.1.0')
+    implementation 'androidx.biometric:biometric:1.1.0'
+
+    // Kotlin components
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.6.10"
+    api "org.jetbrains.kotlinx:kotlinx-coroutines-core:1.5.0"
+    api "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.5.0"
+
+    // Firebase
+    implementation 'com.google.firebase:firebase-database-ktx:20.0.3'
+    implementation 'com.google.firebase:firebase-storage-ktx:20.0.0'
+    implementation 'com.google.firebase:firebase-firestore-ktx:24.0.1'
+
+    // Material Design Library
+    implementation 'com.google.android.material:material:1.3.0-alpha03'
+    implementation "com.google.android.material:material:1.3.0-rc01"
+
+    // NFC | Animation
+    implementation 'com.skyfishjy.ripplebackground:library:1.0.1'
+
+    // Payslips | PDF Viewer | Makes use of this library: https://github.com/Dmitry-Borodin/pdfview-android
+    implementation "com.dmitryborodin:pdfview-android:1.1.0"
+    implementation 'com.squareup.okhttp3:okhttp:4.7.2'
+
+
+    // tests core
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test:core:1.4.0'
+    androidTestImplementation 'androidx.test:core-ktx:1.4.0'
+    androidTestImplementation 'androidx.test:runner:1.4.0'
+    androidTestImplementation 'androidx.test:rules:1.4.0'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.3'
+    androidTestImplementation 'androidx.test.ext:junit-ktx:1.1.3'
+    androidTestImplementation 'androidx.test.ext:truth:1.4.0'
+    androidTestImplementation 'com.google.truth:truth:1.1.3'
+    androidTestUtil 'androidx.test:orchestrator:1.4.1'
+
+    // arch component tests
+    androidTestImplementation 'androidx.work:work-testing:2.7.1'
+    androidTestImplementation 'androidx.room:room-testing:2.4.2'
+    testImplementation 'org.jetbrains.kotlinx:kotlinx-coroutines-test:1.6.0-native-mt'
+
+    // espresso
+    androidTestImplementation 'androidx.test.uiautomator:uiautomator:2.2.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-intents:3.4.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-web:3.4.0'
+    androidTestImplementation 'androidx.test.espresso.idling:idling-concurrent:3.4.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-idling-resource:3.4.0'
+
+
+    // NOTE thanks Google for the following dependency bugs, costed me some time here
+    androidTestImplementation('androidx.test.espresso:espresso-contrib:3.4.0') {
+        exclude group: 'org.checkerframework', module: 'checker'
+    }
+    androidTestImplementation('androidx.test.espresso:espresso-accessibility:3.4.0') {
+        exclude group: 'org.checkerframework', module: 'checker'
+    }
+}

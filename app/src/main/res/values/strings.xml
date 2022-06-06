@@ -1,0 +1,60 @@
+<resources>
+    <string name="app_name">NoDrama HR</string>
+    <string name="email_input">Email</string>
+    <string name="password_input">Password</string>
+    <string name="phone_input">Phone Number</string>
+    <string name="register_name">Register Account</string>
+    <string name="activity">ACTIVITY</string>
+    <string name="art_result">ART Result</string>
+    <string name="past_art_submissions">Past Submissions</string>
+    <string name="main_welcome">Welcome,</string>
+    <string name="timesheet">Timesheet</string>
+    <string name="timesheetDetails">Clock-in and out information</string>
+    <string name="leaves">Leaves</string>
+    <string name="leavesInfo">Leave balances &amp; requests</string>
+    <string name="payslips">Payslips</string>
+    <string name="payslipsInfo">View and download payroll</string>
+    <string name="art">Submit ART</string>
+    <string name="artInfo">Weekly self-monitoring results</string>
+    <string name="art_description">Ensure that the test result is shown clearly</string>
+    <string name="art_question3">Are you currently on Health Risk Warning (HRW)?</string>
+    <string name="art_question4">Art Test Result</string>
+    <string name="logout">Log Out</string>
+    <string name="today">Today\'s records</string>
+    <string name="DATE">DATE</string>
+    <string name="PAYSLIP">PAYSLIP</string>
+    <string name="CLOCKIN">CLOCK-IN</string>
+    <string name="CLOCKOUT">CLOCK-OUT</string>
+    <string name="timestamp">TIMESTAMP</string>
+    <string name="clockinvar">Clock-in</string>
+    <string name="clockoutvar">Clock-out</string>
+    <string name="null_clockin_message">You have not clocked in for today.</string>
+    <string name="null_clockout_message">You have not clocked out for today.</string>
+    <string name="pastRecords">Past records</string>
+    <string name="message_write_error">Error Writing Message !</string>
+    <string name="message_write_success">Successfully written to Tag !</string>
+    <string name="message_write_progress">Writing to Tag..</string>
+    <string name="message_tag_detected">NFC Tag Detected !</string>
+    <string name="message_read_tag">Read from NFC Tag</string>
+    <string name="message_write_tag">Write to NFC Tag</string>
+    <string name="message_tap_tag">Tap the NFC Tag to your device !</string>
+    <string name="hint_message">Message</string>
+    <string name="Delete">Delete</string>
+    <string name="enable_biometric_authentication">Enable Biometric Authentication</string>
+    <string name="reset_password">Reset Password</string>
+    <string name="rpHelper">Enter the e-mail linked to your account.</string>
+    <string-array name="HRWList">
+        <item>No</item>
+        <item>Yes</item>
+    </string-array>
+    <string-array name="ResultList">
+        <item>Negative</item>
+        <item>Positive</item>
+    </string-array>
+    <string-array name="LeaveTypeList">
+        <item>Annual</item>
+        <item>Medical</item>
+        <item>Family</item>
+        <item>Birthday</item>
+    </string-array>
+</resources>

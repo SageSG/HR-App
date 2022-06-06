@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "352453671998",
+    "firebase_url": "https://auth-1fced-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "auth-1fced",
+    "storage_bucket": "auth-1fced.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:352453671998:android:4c6ccbf9f17ea69e5e256f",
+        "android_client_info": {
+          "package_name": "com.example.nodrama"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "352453671998-5luuhp94dl97pln2bj2j4uo58fehsk3d.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAAMOQ3VcLFFWvfFAEBMy7ZP-FKLu8Fri0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "352453671998-5luuhp94dl97pln2bj2j4uo58fehsk3d.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
